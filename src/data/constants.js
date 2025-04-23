@@ -219,23 +219,35 @@ export const Bio = {
       description:
         "Designed a mobile app to connect farmers with consumers and retailers, enhancing transparency and reducing dependency on intermediaries. Integrated an ML model to assess fruit quality based on images and videos. Designed and launched a bidding interface specifically tailored for local farmers, allowing them to access a broader market. Worked on the development of a real-time chat system for seamless communication between users.",
       image:
-        "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png" ,
+        ["https://raw.githubusercontent.com/CodeWithLakhan/Portfolio/refs/heads/main/src/images/2.jpg","https://raw.githubusercontent.com/CodeWithLakhan/Portfolio/refs/heads/main/src/images/1.jpg","https://raw.githubusercontent.com/CodeWithLakhan/Portfolio/refs/heads/main/src/images/2.jpg"] ,
       tags: [
-        "Docker",
-        "AWS",
-        "DuckDNS",
-        "Eslint",
-        "Husky",
-        "CI/CD",
-        "React Js",
-        "MongoDb",
-        "Node Js",
-        "Express Js",
-        "Redux",
+        "Flutter",
+        "Dart",
+        "Python",
+        "TensorFlow",
+        "Android Studio",
+        "Rest Api"
       ],
-      category: "web app",
-      github: "https://github.com/rishavchanda/Trackify",
-      webapp: "https://trackify.duckdns.org",
+      github: "",
+      webapp: "",
+    },
+    {
+      id: 9,
+      title: "Portfolio",
+      description:
+        "Built a responsive portfolio website using React to showcase my projects and skills. The site features a modern UI, smooth navigation, and adapts seamlessly across devices. It includes dynamic components, custom animations, and interactive elements that highlight my work and provide a great user experience.",
+      image:
+        ["https://raw.githubusercontent.com/CodeWithLakhan/Portfolio/refs/heads/main/src/images/2.jpg","https://raw.githubusercontent.com/CodeWithLakhan/Portfolio/refs/heads/main/src/images/1.jpg","https://raw.githubusercontent.com/CodeWithLakhan/Portfolio/refs/heads/main/src/images/2.jpg"] ,
+      tags: [
+        "Flutter",
+        "Dart",
+        "Python",
+        "TensorFlow",
+        "Android Studio",
+        "Rest Api"
+      ],
+      github: "",
+      webapp: "",
     },
     // {
     //   id: 0,
