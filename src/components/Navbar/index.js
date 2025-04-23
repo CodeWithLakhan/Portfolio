@@ -24,6 +24,7 @@ const Navbar = () => {
         <NavItems>
           <NavLink as={Link} to="/">Home</NavLink>
           <NavLink as={Link} to="/skills">Skills</NavLink>
+          <NavLink as={Link} to="/achievements">Achievements</NavLink>
           <NavLink as={Link} to="/experience">Experience</NavLink>
           <NavLink as={Link} to="/projects">Projects</NavLink>
           <NavLink as={Link} to="/education">Education</NavLink>
@@ -36,6 +37,7 @@ const Navbar = () => {
           <MobileMenu isOpen={isOpen}>
             <MobileLink as={Link} to="/" onClick={() => setIsOpen(false)}>About</MobileLink>
             <MobileLink as={Link} to="/skills" onClick={() => setIsOpen(false)}>Skills</MobileLink>
+            <NavLink as={Link} to="/achievements">Achievements</NavLink>
             <MobileLink as={Link} to="/experience" onClick={() => setIsOpen(false)}>Experience</MobileLink>
             <MobileLink as={Link} to="/projects" onClick={() => setIsOpen(false)}>Projects</MobileLink>
             <MobileLink as={Link} to="/education" onClick={() => setIsOpen(false)}>Education</MobileLink>

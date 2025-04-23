@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ProjectDetails from "./components/ProjectDetails";
+import Achievements from './components/Achievements';
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -39,6 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Hero />} />
             <Route path="/skills" element={<Wrapper><Skills /></Wrapper>} />
+            <Route path="/achievements" element={<Wrapper><Achievements /></Wrapper>} />
             <Route path="/experience" element={<Wrapper><Experience /></Wrapper>} />
             <Route path="/projects" element={<Projects  openModal={openModal} setOpenModal={setOpenModal} />} />
             <Route path="/education" element={<Wrapper><Education /></Wrapper>} />

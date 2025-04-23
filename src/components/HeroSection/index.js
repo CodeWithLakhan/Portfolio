@@ -4,7 +4,7 @@ import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, Hero
 import HeroImg from '../../images/image1.png'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
-import Footer from '../Footer';
+
 
 
 const HeroSection = () => {

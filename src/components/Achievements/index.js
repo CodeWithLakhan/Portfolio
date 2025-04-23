@@ -1,14 +1,13 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import { experiences } from '../../data/constants';
-import ExperienceCard from '../Cards/ExperienceCard';
-
+import { achievements } from '../../data/constants';
+import AchievementsCard from "../Cards/AchievememtsCard";
 
 const Container = styled.div`
 display: flex;
@@ -71,26 +70,26 @@ justify-content: center;
 gap: 12px;
 `
 
-const Experience = () => {
+const Achievements = () => {
   return (
     <Container id='experience'>
         <Wrapper>
 
         <Title>
-            Experience
+            Achievements
         </Title>
-        <Desc>Here are some of my Projects</Desc>
+        <Desc>Here are some of my Achievements.</Desc>
         <TimeLineSection>
             <Timeline>
 
-            {experiences.map((experience,index)=>(
+            {achievements.map((achievements,index)=>(
                 <TimelineItem>
 
                 <TimelineSeparator>
                     <TimelineDot variant='outlined' color='secondary'/>
-                    {index !== experience.length - 1 && <TimelineConnector/>}
+                    {index !== achievements.length - 1 && <TimelineConnector/>}
                 </TimelineSeparator>
-                <TimelineContent sx={{py:"12px",px:2}}><ExperienceCard experience={experience}/></TimelineContent>
+                <TimelineContent sx={{py:"12px",px:2}}><AchievementsCard achievements={achievements}/></TimelineContent>
                 </TimelineItem>
             ))}
             </Timeline>
@@ -99,5 +98,4 @@ const Experience = () => {
     </Container>
   )
 }
-
-export default Experience
+export default Achievements;

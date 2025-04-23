@@ -13,16 +13,6 @@ const FooterContainer = styled.div`
   background-color: ${({ theme }) => theme.bg}; // optional
 `;
 
-const ClippedContainer = styled.div`
-  width: 100%;
-  height: 100px;
-  background: #ffffff;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
 
 const FooterWrapper = styled.footer`
   width: 100%;
@@ -95,6 +85,8 @@ const Copyright = styled.p`
   color: ${({ theme }) => theme.text_primary};
   text-align: center;
   width: 100%;
+  padding: 0px;
+  margin: 0px;
 `;
 
 const IconDivider = styled.div`
