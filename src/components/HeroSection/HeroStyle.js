@@ -196,7 +196,7 @@ export const ResumeButton = styled.a`
     
     
     @media (max-width: 640px) {
-        padding: 12px 0;
+        padding: 12px 0px;
         font-size: 18px;
     } 
 
