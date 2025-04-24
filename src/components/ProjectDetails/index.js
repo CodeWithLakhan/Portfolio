@@ -9,32 +9,36 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Container = styled.div`
-width: 100%;
-height: 100%;
-position: absolute;
-top: 0;
-left: 0;
-background-color: #000000a7;
-display: flex;
-align-items: top;
-justify-content: center;
-overflow-y: scroll;
-transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000a7;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: scroll;
+  transition: all 0.5s ease;
 `;
 
-
 const Wrapper = styled.div`
-max-width: 800px;
-width: 100%;
-border-radius: 16px;
-margin: 50px 12px;
-height: min-content;
-background-color: ${({ theme }) => theme.card};
-color: ${({ theme }) => theme.text_primary};
-padding: 20px;
-display: flex;
-flex-direction: column;
-position: relative;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 16px;
+  margin: 50px 12px;
+  height: min-content;
+  background-color: ${({ theme }) => theme.card};
+  color: ${({ theme }) => theme.text_primary};
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (max-width: 768px) {
+    margin: 20px 8px;
+    padding: 16px;
+  }
 `;
 
 const Title = styled.div`
@@ -42,6 +46,10 @@ const Title = styled.div`
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   margin: 8px 6px 0px 6px;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 const Date = styled.div`
@@ -49,6 +57,10 @@ const Date = styled.div`
   margin: 2px 6px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary};
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const Desc = styled.div`
@@ -56,6 +68,10 @@ const Desc = styled.div`
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary};
   margin: 8px 6px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const ImageItem = styled.img`
@@ -64,6 +80,10 @@ const ImageItem = styled.img`
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    height: 250px;
+  }
 `;
 
 const NavButton = styled.div`
@@ -78,6 +98,11 @@ const NavButton = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   user-select: none;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    padding: 8px;
+  }
 `;
 
 const PrevButton = styled(NavButton)`
@@ -102,6 +127,11 @@ const Tag = styled.div`
   padding: 4px 8px;
   border-radius: 8px;
   background-color: ${({ theme }) => theme.primary + 20};
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
 `;
 
 const Label = styled.div`
@@ -109,6 +139,10 @@ const Label = styled.div`
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
   margin: 8px 6px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const Members = styled.div`
@@ -129,6 +163,11 @@ const MemberImage = styled.img`
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const MemberName = styled.div`
@@ -136,40 +175,52 @@ const MemberName = styled.div`
   font-weight: 500;
   width: 200px;
   color: ${({ theme }) => theme.text_primary};
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    width: 160px;
+  }
 `;
 
 const ButtonGroup = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    margin: 12px 0px;
-    gap: 12px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px 0px;
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 8px;
+  }
 `;
 
 const Button = styled.a`
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    color: ${({ theme }) => theme.text_primary};
-    padding: 12px 16px;
-    border-radius: 8px;
-    background-color: ${({ theme }) => theme.primary};
-    ${({ dull, theme }) => dull && `
-        background-color: ${theme.bgLight};
-        color: ${theme.text_secondary};
-        &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
-        }
-    `}
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.5s ease;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: ${({ theme }) => theme.primary};
+  ${({ dull, theme }) => dull && `
+    background-color: ${theme.bgLight};
+    color: ${theme.text_secondary};
     &:hover {
-        background-color: ${({ theme }) => theme.primary + 99};
+      background-color: ${theme.bg + 99};
     }
-    @media only screen and (max-width: 600px) {
-        font-size: 12px;
-    }
+  `}
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: ${({ theme }) => theme.primary + 99};
+  }
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
 `;
 
 const ProjectModal = ({ openModal, setOpenModal }) => {
@@ -264,7 +315,6 @@ const ProjectModal = ({ openModal, setOpenModal }) => {
             <Button href={project?.github} target="_blank">
               View Code
             </Button>
-           
           </ButtonGroup>
         </Wrapper>
       </Container>

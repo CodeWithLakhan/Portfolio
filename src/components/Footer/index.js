@@ -10,33 +10,42 @@ const FooterContainer = styled.div`
   padding: 2rem 0;
   display: flex;
   justify-content: center;
-  background-color: ${({ theme }) => theme.bg}; // optional
+  background-color: ${({ theme }) => theme.bg};
 `;
 
 const FooterWrapper = styled.footer`
   width: 100%;
   max-width: 1200px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 2rem;
   padding: 1rem;
   flex-wrap: wrap;
   text-align: center;
   clip-path: polygon(0 5%, 30% 0%, 100% 0, 100% 100%, 0 100%);
+
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    clip-path: none;
   }
 `;
 
 const Column = styled.div`
   flex: 1;
-  /* min-width: 200px; */
+  min-width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
+
+  @media (max-width: 768px) {
+    min-width: unset;
+    width: 100%;
+    align-items: center;
+  }
 `;
 
 const Logo = styled.h1`
@@ -48,6 +57,10 @@ const Logo = styled.h1`
 const Tagline = styled.p`
   font-size: 1rem;
   color: ${({ theme }) => theme.text_primary};
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const SocialMediaIcons = styled.div`
@@ -56,9 +69,12 @@ const SocialMediaIcons = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 30px;
-  position: relative;
-  
-  
+
+  @media (max-width: 768px) {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
 `;
 
 const SocialMediaIcon = styled.a`
@@ -73,11 +89,19 @@ const SocialMediaIcon = styled.a`
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
+
+  @media (max-width: 768px) {
+    min-width: 60px;
+  }
 `;
 
 const ContactInfo = styled.p`
   font-size: 1rem;
   color: ${({ theme }) => theme.text_primary};
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const Copyright = styled.p`
@@ -86,8 +110,13 @@ const Copyright = styled.p`
   color: ${({ theme }) => theme.text_primary};
   text-align: center;
   width: 100%;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+  }
 `;
 
 const IconDivider = styled.div`
@@ -100,6 +129,10 @@ const Text = styled.div`
   font-size: 11px;
   padding-top: 6px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 function Footer() {
@@ -114,7 +147,7 @@ function Footer() {
         <Column>
           <SocialMediaIcons>
             <SocialMediaIcon href={Bio.github} target="_blank">
-              <svg
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -133,7 +166,7 @@ function Footer() {
             </SocialMediaIcon>
 
             <SocialMediaIcon href={Bio.leetcode} target="_blank">
-              <svg
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 width="26"
@@ -167,7 +200,7 @@ function Footer() {
             </SocialMediaIcon>
 
             <SocialMediaIcon href={Bio.hackerrank} target="_blank">
-              <svg
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 enable-background="new 0 0 24 24"
                 viewBox="0 0 24 24"
@@ -181,7 +214,6 @@ function Footer() {
                   class="color000000 svgShape"
                 ></path>
               </svg>
-
               <Text>HackerRank</Text>
             </SocialMediaIcon>
           </SocialMediaIcons>
