@@ -15,6 +15,7 @@ import img14 from '../images/14.png';
 import img15 from '../images/15.png';
 import img16 from '../images/16.png';
 import img17 from '../images/17.png';
+import img18 from '../images/18.png';
 
 export const Bio = {
     name: "Lakhan Agrawal",
@@ -287,7 +288,7 @@ export const Bio = {
       description:
         "Built a responsive portfolio website using React to showcase my projects and skills. The site features a modern UI, smooth navigation, and adapts seamlessly across devices. It includes dynamic components, custom animations, and interactive elements that highlight my work and provide a great user experience.",
       image:
-        ["https://private-user-images.githubusercontent.com/121571107/436381760-03798057-9b11-4066-a140-25f2efcd03ec.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDUzODgyMTgsIm5iZiI6MTc0NTM4NzkxOCwicGF0aCI6Ii8xMjE1NzExMDcvNDM2MzgxNzYwLTAzNzk4MDU3LTliMTEtNDA2Ni1hMTQwLTI1ZjJlZmNkMDNlYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQyM1QwNTU4MzhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yZjkxZmRlYjUyZTc5ZWE1NTc2NDg4YmQ3MDM3MWViOGZkN2U4NzZjMTYxNTRhZDEzZjk4NjljM2VlMWQ4NjRhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.2JX4RmbNepbINg9wpLb5KOG7LiXWHNlWDon6AuAO_es"] ,
+        [img18] ,
       tags: [
         "React",
         "HTML",
